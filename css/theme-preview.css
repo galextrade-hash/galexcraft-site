@@ -1,0 +1,111 @@
+/* ============================================================
+   Theme preview layer — for comparing design directions live.
+   Toggled by #themePreviewPanel (js/theme-preview.js).
+   Safe to delete both files once a direction is picked.
+   ============================================================ */
+
+:root[data-palette="terracotta"] {
+  --apricot:        #E2895A;
+  --apricot-deep:   #C56A34;
+  --terracotta:     #A85A38;
+  --gold:           #D9A441;
+}
+
+:root[data-palette="pastel"] {
+  --apricot:        #F6C177;
+  --apricot-deep:   #EFA855;
+  --terracotta:     #D98F63;
+  --gold:           #F0C766;
+}
+
+:root[data-fonts="editorial"] {
+  --font-display: "Playfair Display", "Times New Roman", serif;
+  --font-body:    "Inter", "Segoe UI", sans-serif;
+}
+
+:root[data-fonts="minimal"] {
+  --font-display: "Jost", "Segoe UI", sans-serif;
+  --font-body:    "Jost", "Segoe UI", sans-serif;
+}
+:root[data-fonts="minimal"] h1,
+:root[data-fonts="minimal"] h2,
+:root[data-fonts="minimal"] h3,
+:root[data-fonts="minimal"] h4 { font-weight: 500; letter-spacing: -0.01em; }
+
+:root[data-density="cozy"] .section-pad { padding: clamp(2.75rem, 6vw, 4.5rem) 0; }
+:root[data-density="cozy"] { --gap: clamp(1rem, 2vw, 1.5rem); }
+:root[data-density="cozy"] .story-grid,
+:root[data-density="cozy"] .process-intro { gap: clamp(1rem, 2.5vw, 2rem); }
+:root[data-density="cozy"] .portfolio-list { gap: clamp(2rem, 4vw, 3rem); }
+:root[data-density="cozy"] .portfolio-item { gap: clamp(1rem, 3vw, 2rem); }
+:root[data-density="cozy"] .detail-strip { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+:root[data-density="cozy"] .process-strip { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+:root[data-density="cozy"] .video-grid { gap: clamp(0.75rem, 1.5vw, 1.25rem); }
+:root[data-density="cozy"] .section-head { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+
+/* ---- switcher panel ---- */
+#themePreviewPanel {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  z-index: 999;
+  background: rgba(59, 46, 36, 0.92);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-family: "Jost", "Segoe UI", sans-serif;
+  font-size: 12px;
+  box-shadow: 0 16px 40px -12px rgba(0,0,0,0.4);
+  width: 220px;
+}
+#themePreviewPanel h6 {
+  margin: 0 0 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #E4B94F;
+  font-weight: 500;
+}
+#themePreviewPanel .tp-row { margin-bottom: 10px; }
+#themePreviewPanel .tp-row:last-child { margin-bottom: 0; }
+#themePreviewPanel .tp-label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 5px;
+}
+#themePreviewPanel .tp-options { display: flex; gap: 6px; flex-wrap: wrap; }
+#themePreviewPanel button {
+  font-family: inherit;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+}
+#themePreviewPanel button.is-active {
+  background: #E4B94F;
+  border-color: #E4B94F;
+  color: #3B2E24;
+  font-weight: 500;
+}
+#themePreviewPanel .tp-toggle {
+  position: absolute;
+  top: -14px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #3B2E24;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+#themePreviewPanel.is-collapsed .tp-body { display: none; }
