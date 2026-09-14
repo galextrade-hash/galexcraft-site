@@ -20,8 +20,8 @@
   --glass-border: rgba(255, 255, 255, 0.6);
   --glass-shadow: 0 20px 60px -20px rgba(120, 80, 40, 0.25);
 
-  --font-display: "Cormorant Garamond", "Times New Roman", serif;
-  --font-body:    "Jost", "Segoe UI", sans-serif;
+  --font-display: "Playfair Display", "Times New Roman", serif;
+  --font-body:    "Inter", "Segoe UI", sans-serif;
   --font-script:  "Caveat", cursive;
 
   --container: 1180px;
