@@ -37,16 +37,4 @@
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  const gaId = window.GA_MEASUREMENT_ID;
-  if (gaId && /^G-[A-Z0-9]+$/.test(gaId) && gaId !== 'G-XXXXXXXXXX') {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-    document.head.appendChild(script);
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', gaId);
-  }
 })();
